@@ -1,0 +1,12 @@
+---
+layout: container
+eleventyComputed:
+  eleventyNavigation:
+    key: "{{titles.publications}}"
+    order: 3
+---
+
+<h1 class="cmp-h1">{{ titles.publications if titles.publications else "Publications" }}</h1>
+<div>
+  {% include "./includes/components/publication-list.njk"%}
+</div>

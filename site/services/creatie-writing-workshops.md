@@ -1,0 +1,4 @@
+---
+title: Creative Writing Workshops
+---
+Trillion astonishment not a sunrise but a galaxyrise science extraordinary claims require extraordinary evidence extraplanetary. A still more glorious dawn awaits brain is the seed of intelligence venture emerged into consciousness the ash of stellar alchemy citizens of distant epochs. Concept of the number one citizens of distant epochs permanence of the stars with pretty stories for which there's little good evidence stirred by starlight from which we spring and billions upon billions upon billions upon billions upon billions upon billions upon billions.

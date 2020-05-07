@@ -1,0 +1,22 @@
+---
+layout: container
+eleventyComputed:
+  eleventyNavigation:
+    key: "{{titles.services}}"
+    order: 6
+---
+
+<h1 class="cmp-h1">{{ titles.services if titles.services else "Services" }}</h1>
+
+<div>
+    {% for service in collections.service %}
+    <section class="pt-12 first:pt-0">
+        <h2 class="cmp-h2">{{service.data.title}}</h2>
+        <div class="cmp-markdown">
+            {{ service.templateContent | safe }}
+        </div>
+        <a class="cmp-link-button" href="/contact">Contact</a>
+    </section>
+    {% endfor %}
+</div>
+

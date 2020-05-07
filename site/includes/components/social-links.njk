@@ -1,0 +1,19 @@
+{% if socialMedia %}
+    <ul class="flex fill-current">
+        {% if socialMedia.facebook_url %}
+        <li>
+            <a class="w-8 block ml-4 hover:text-accent1" href="{{socialMedia.facebook_url}}">{% include "../../media/icons/facebook.svg" %}</a>
+        </li>
+        {% endif %}
+        {% if socialMedia.twitter_url %}
+        <li>
+            <a class="w-8 block ml-4 hover:text-accent1" href="{{socialMedia.twitter_url}}">{% include "../../media/icons/twitter.svg" %}</a>
+        </li>
+        {% endif %}
+        {% if socialMedia.instagram_url %}
+        <li>
+            <a class="w-8 block ml-4 hover:text-accent1" href="{{socialMedia.instagram_url}}">{% include "../../media/icons/instagram.svg" %}</a>
+        </li>
+        {% endif %}
+    </ul>
+{% endif %}

@@ -1,0 +1,11 @@
+---
+layout: container
+---
+
+{% if collections.book.length > 1 %}
+    <a href="/books" class="cmp-link flex block pb-8 fill-current">
+        <span class="w-6 h-6">{% include "../../media/icons/chevron-left.svg" %}</span> Back to Books
+    </a>
+{% endif %}
+<h1 class="cmp-h1">{{title}}</h1>
+{% include '../components/book-detail.njk' %}

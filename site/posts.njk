@@ -1,0 +1,54 @@
+---
+layout: container
+eleventyComputed:
+  eleventyNavigation:
+    key: "{{titles.posts}}"
+    order: 5
+pagination:
+  data: collections.post
+  size: 5
+  alias: posts
+---
+
+<h1 class="cmp-h1">{{ titles.posts if titles.posts else "News" }}</h1>
+  <div>
+  {% for post in posts | reverse %}
+    {% set markdown = post.templateContent %}
+    {% set slug = post.fileSlug %}
+    {% set post = post.data %}
+
+    <article class="mt-20 first:mt-8">
+      <h2 class="cmp-h2">{{ post.title }}</h2>
+      {% if post.date %}
+        <p>{{post.date | prettyDate}}</p>
+      {% endif %}
+      <div class="js-click-copy mt-4">
+        <button class="flex items-center text-sm">
+          <div class="js-copy-icon w-8 h-8 mr-2">{% include "./media/icons/copy.svg" %}</div>
+          <div class="js-success-icon w-8 h-8 mr-2 hidden">{% include "./media/icons/checkmark.svg" %}</div> 
+          Copy a link to this post
+        </button>
+      <input type="text" value="https://{{general.site_domain}}/posts/{{slug}}" class="hidden"/>
+      </div>
+      {% if post.image %}
+        <figure class="my-4 mx-auto">
+          <img 
+            class="max-h-lg w-auto mx-auto" 
+            loading="lazy" 
+            srcset="{% srcset post.cover_image.file %}" 
+            src="{% src post.cover_image.file %}" 
+            alt="{{post.cover_image.alt}}"/>
+          {% if post.cover_image.byline %}
+            <figcaption class="italic flex justify-end text-sm">{{post.cover_image.byline}}</figcaption>
+          {% endif %}
+        </figure>
+      {% endif %}
+      <div class="cmp-markdown">
+        {{ markdown | safe}}
+      </div>
+      {# TODO macro? includes? social share? #}
+    </article>
+{% endfor %}
+{% include "./includes/components/pagination.njk" %}
+
+</div>

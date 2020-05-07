@@ -1,0 +1,9 @@
+<header class="z-20 w-full shadow relative h-header flex items-center lg:px-4 lg:justify-between">     
+  {# Nav is sr-only; sr users to not need this toggle button #}
+  <button class="mx-4 text-dark fill-current w-8 h-8 js-nav-toggle lg:hidden" aria-hidden="true">
+    <span class="js-open-icon inline">{% include "../../media/icons/menu.svg" %}</span>
+    <span class="js-close-icon hidden">{% include "../../media/icons/cross.svg" %}</span>
+  </button>
+  <a class="font-title text-2xl uppercase" href="/">{{general.site_title}}</a>  
+  {% include "./nav.njk" %}
+</header>

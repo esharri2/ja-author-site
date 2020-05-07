@@ -1,0 +1,34 @@
+<!doctype html>
+<html class="h-full bg-light" lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{{titles[page.fileSlug] }}{% if titles[page.fileSlug]%} | {% endif %}{{general.site_title}}</title>
+        <meta name="description" content="{{general.site_description}}">
+        <meta name="theme-color" content="#F5F5F5">
+        {% include "components/meta-social.njk" %}
+        {% include "components/meta-icons.njk" %}
+
+        {# {% if page.fileSlug === "blog" %}
+            <meta name="robots" content="noindex,follow"/>
+        {% endif %} #}
+        <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+        <link href="https://fonts.googleapis.com/css?family=Spartan|Roboto&display=swap" rel="stylesheet">  
+        <link rel="stylesheet" href="/main.css">
+        <script src="/bundle.js" defer="defer"></script>
+        <link rel="canonical" href="{{ general.site_domain }}{{ page.url }}">
+    </head>
+
+    <body class="text-dark h-full overflow-x-hidden">
+        {% if page.fileSlug !== '' %}
+            {% include "components/skip-to-content.njk" %} 
+            {% include "components/header.njk" %} 
+        {% endif %}        
+        <main id="main" class="mx-auto px-6 min-h-full max-w-screen-lg">{{ content | safe }}</main>
+        {% include "components/back-to-top.njk" %} 
+        {% if page.fileSlug !== '' or featured.show  %}
+            {% include "components/footer.njk" %} 
+        {% endif %}
+        <div class="ie-only-notice">Sorry, this site is not built for Internet Explorer. Please try it on a different browser.</div>
+    </body>
+</html>

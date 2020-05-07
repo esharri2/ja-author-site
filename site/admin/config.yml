@@ -1,0 +1,441 @@
+backend:
+  name: git-gateway
+  branch: master # Branch to update (optional; defaults to master)
+
+media_folder: "site/media/uploads" # Media files will be stored in the repo under images/uploads
+public_folder: "/media"
+
+# CMS UI CONFIG
+show_preview_links: false
+publish_mode: editorial_workflow
+
+# COLLECTIONS
+collections: # A list of collections the CMS should be able to edit
+  - name: "general"
+    label: "General settings"
+    description: >
+      The 'General site informaton' section has basic information about your
+      site, such as title and description.
+
+
+      The 'Page and navigation titles' allows you set the page title and
+      navigation name for each page. These all have default values to start.
+    files:
+      - name: "general"
+        label: "General site information"
+        file: "site/data/general.json"
+        fields:
+          - {
+              label: "Site title",
+              name: "site_title",
+              widget: "string",
+              required: true,
+            }
+          - {
+              label: "Domain name",
+              name: "site_domain",
+              widget: "string",
+              required: true,
+            }
+          - {
+              label: "Site subtitle",
+              name: "site_subtitle",
+              widget: "string",
+              required: false,
+            }
+          - {
+              label: "Site description",
+              name: "site_description",
+              widget: "string",
+              required: false,
+              hint: "This is a metadata description that will show under your site title in Google search results.",
+            }
+      - name: "titles"
+        label: "Page and navigation titles"
+        file: "site/data/titles.json"
+        fields:
+          - {
+              name: "about",
+              label: "About page title",
+              widget: "string",
+              default: "About",
+              required: true,
+            }
+          - {
+              name: "books",
+              label: "Books page title",
+              widget: "string",
+              default: "Books",
+              required: true,
+            }
+          - {
+              name: "services",
+              label: "Services page title",
+              widget: "string",
+              default: "Services",
+              required: true,
+            }
+          - {
+              name: "events",
+              label: "Events page title",
+              widget: "string",
+              default: "Events",
+              required: true,
+            }
+          - {
+              name: "publications",
+              label: "Publications page title",
+              widget: "string",
+              default: "Publications",
+              required: true,
+            }
+          - {
+              name: "contact",
+              label: "Contact page title",
+              widget: "string",
+              default: "Contact",
+              required: true,
+            }
+          - {
+              name: "posts",
+              label: "News/blog page title",
+              widget: "string",
+              default: "News",
+              required: true,
+            }
+      - name: "featured"
+        label: "Featured book information"
+        file: "site/data/featured.json"
+        fields:
+          - {
+              name: "title",
+              label: "Featured book",
+              widget: "relation",
+              collection: "books",
+              searchFields: ["title"],
+              valueField: "title",
+              multiple: false
+            }
+          - {
+              label: "Show featured book on home page",
+              name: "show",
+              widget: "boolean",
+              required: true,
+              default: false,
+              hint:
+                "You can set one of your books 'featured' to have it display
+                prominently on the site (the location depends on how your site has
+                been designed.) You don't have to mark any of your books as
+                'featured'.",
+            }
+          - {
+              label: "Lead-in text for featured book on home page",
+              name: "subtitle",
+              widget: "string",
+              required: false,
+              default: "Available now",
+              hint:
+                "Some text to show before the book featured on your home page, such as 'Coming soon' or 'Available now'",
+            }
+      - name: "bookspage"
+        label: "Books page settings"
+        file: "site/data/bookspage.json"
+        fields:
+          - {
+              label: "Show other publications on the books page.",
+              name: "show_other",
+              widget: "boolean",
+              required: true,
+              default: false,
+              hint:
+                "By default your books and other publications are on two separate pages. Select this option to show your other publications at the bottom of the books page",
+            }
+  - name: "bio"
+    label: "Bio"
+    description: "Biographical information."
+    files:
+      - name: "bio"
+        label: "Bio"
+        format: "frontmatter"
+        file: "site/about.md"
+        fields:
+          - label: "Author image"
+            name: "author_image"
+            widget: "object"
+            required: false
+            fields:
+              - {
+                  label: "Author image",
+                  name: "file",
+                  widget: "image",
+                  required: false,
+                }
+              - {
+                  label: "Author image byline",
+                  name: "byline",
+                  widget: "string",
+                  required: false,
+                }
+          - label: "Bio"
+            name: "body"
+            widget: "markdown"
+            required: false
+            buttons:
+              [
+                "bold",
+                "italic",
+                "link",
+                "quote",
+                "bulleted-list",
+                "numbered-list",
+              ]
+            editorComponents: []
+  - name: "contact"
+    label: "Contact information"
+    description: "Contact information and social media links."
+    files:
+      - name: "contact"
+        label: "Contact information"
+        file: "site/data/contact.json"
+        fields:
+          - {
+              label: "Main contact email",
+              name: "main_email",
+              widget: "string",
+              hint:
+                "The contact form will send email to this address. This address
+                won't appear in any way on the website.",
+            }
+          - label: "Other contact emails"
+            description:
+              "Emails for special cases, such as bookings or reviews."
+            name: "other_emails"
+            widget: "list"
+            fields:
+              - {
+                  label: "Email",
+                  name: "email",
+                  widget: "string",
+                  hint:
+                    "Add an email for additional contact that will display along
+                    with your contact form.",
+                }
+              - {
+                  label: "Purpose",
+                  name: "purpose",
+                  widget: "string",
+                  hint:
+                    "Add the purpose of this contact, e.g. 'Readings and public
+                    appearances'",
+                }
+              - {
+                  label: "Name of contact",
+                  name: "name",
+                  widget: "string",
+                  required: false,
+                }
+      - name: "social"
+        label: "Social media links"
+        file: "site/data/socialMedia.json"
+        fields:
+          - {
+              label: "Facebook",
+              name: "facebook_url",
+              widget: "string",
+              hint: "e.g. https://www.facebook.com/yourpage",
+            }
+          - {
+              label: "Twitter",
+              name: "twitter_url",
+              widget: "string",
+              hint: "e.g. https://www.twitter.com/youraccount",
+            }
+          - {
+              label: "Instagram",
+              name: "instagram_url",
+              widget: "string",
+              hint: "e.g. https://www.instagram.com/youraccount",
+            }
+  - name: "posts"
+    label: "News items"
+    label_singular: "news item"
+    folder: "site/posts"
+    create: true
+    description: "Updates and announcements."
+    fields: 
+      - label: "Title"
+        name: "title"
+        widget: "string"
+        required: true
+      - label: "Publish date"
+        name: "date"
+        widget: "datetime"
+        dateFormat: "YYYY-MM-DD"
+        format: "YYYY-MM-DD"
+      - label: "Cover image"
+        name: "cover_image"
+        widget: "object"
+        required: false
+        fields:
+          - {
+              label: "Image",
+              name: "file",
+              widget: "image",
+              required: true,
+            }
+          - {
+              label: "Byline",
+              name: "byline",
+              widget: "string",
+              required: false,
+            }
+          - {
+              label: "Alt text",
+              name: "alt",
+              widget: "string",
+              required: false,
+              hint: "This is how your image will be described to someone using a screen reader. You can leave this blank if the image is purely decorative."
+            }
+      - label: "Body"
+        name: "body"
+        widget: "markdown"
+        required: true
+        buttons:
+          ["bold", "italic", "link", "quote", "bulleted-list", "numbered-list"]
+        editorComponents: ["image"]
+  - name: "books"
+    label: "Books"
+    label_singular: "book"
+    folder: "site/books"
+    create: true
+    fields:
+      - { label: "Title", name: "title", widget: "string", required: true }
+      - {
+          label: "Publisher",
+          name: "publisher",
+          widget: "string",
+          required: false,
+        }
+      - {
+          label: "Genre or type",
+          name: "genre",
+          widget: "string",
+          required: false,
+        }
+      - { label: "Synopsis", name: "synopsis", widget: "text", required: false }
+      - { label: "Cover image", name: "cover", widget: "image", required: true }
+      - {
+          label: "Publication date",
+          name: "date",
+          widget: "datetime",
+          dateFormat: "YYYY-MM-DD",
+          format: "YYYY-MM-DD",
+          required: true,
+        }
+      - label: "Purchase links"
+        name: "purchase_links"
+        widget: "list"
+        required: false
+        fields:
+          - {
+              label: "Source",
+              name: "source",
+              hint: ".e.g, Powell's Books",
+              widget: "string",
+              required: true,
+            }
+          - { label: "Link", name: "link", widget: "string", required: true }
+      - label: "Blurbs"
+        name: "blurbs"
+        widget: "list"
+        required: false
+        fields:
+          - { label: "Text", name: "text", widget: "text" }
+          - { label: "Attribution", name: "attribution", widget: "string" }
+      - label: "Reviews and Press"
+        name: "reviews"
+        widget: "list"
+        required: false
+        fields:
+          - {
+              label: "Publication / source",
+              name: "publication",
+              widget: "string",
+              required: true,
+            }
+          - { label: "Link", name: "purpose", widget: "string", required: true }
+  - name: "publications"
+    label: "Other publications"
+    label_singular: "publication"
+    description: "Non-book publications"
+    folder: "site/publications"
+    create: true
+    fields:
+      - { label: "Title", name: "title", widget: "string", required: true }
+      - {
+          label: "Publisher / publication",
+          name: "publisher",
+          widget: "string",
+          required: true,
+        }
+      - {
+          label: "Description",
+          name: "description",
+          widget: "text",
+          required: false,
+        }
+      - {
+          label: "Genre or type",
+          name: "genre",
+          widget: "string",
+          required: false,
+        }
+      - {
+          label: "Publication date",
+          name: "date",
+          widget: "datetime",
+          dateFormat: "YYYY-MM-DD",
+          format: "YYYY-MM-DD",
+          required: true,
+        }
+      - { label: "Link", name: "link", widget: "string", required: false }
+  - name: "events"
+    label: "Events"
+    label_singular: "event"
+    description: "Schedule of events"
+    folder: "site/events"
+    create: true
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Location", name: "location", widget: "string" }
+      - {
+          label: "Description",
+          name: "description",
+          widget: "text",
+          required: false,
+        }
+      - {
+          label: "Date",
+          name: "date",
+          widget: "datetime",
+          dateFormat: "YYYY-MM-DD",
+          timeFormat: "hh:mm a",
+        }
+  - name: "services"
+    label: "Services"
+    label_singular: "service"
+    description: "A list of freelance services you offer"
+    folder: "site/services"
+    create: true
+    fields:
+      - label: "Name"
+        name: "title"
+        widget: "string"
+        required: true
+      - label: "Body"
+        name: "body"
+        widget: "markdown"
+        required: true
+        buttons:
+          ["bold", "italic", "link", "quote", "bulleted-list", "numbered-list"]
+        editorComponents: []

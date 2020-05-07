@@ -1,0 +1,30 @@
+---
+layout: container
+eleventyComputed:
+  eleventyNavigation:
+    key: "{{titles.events}}"
+    order: 4
+pagination:
+  data: collections.event
+  size: 100
+  alias: events
+---
+<h1 class="cmp-h1">{{ titles.events if titles.events else "Events" }}</h1>
+
+<ul>
+{% for event in events | reverse %}
+  <li class="py-4 first:pt-0">
+    <p class="text-xl">{{event.data.title}}</p>
+    <p>{{event.data.date | prettyDateAndTime}}</p> 
+    <p>{{event.data.location}}</p>
+    {% if event.data.description %}
+      <p class="block mt-2">{{event.data.description}}</p>
+    {% endif %}
+  </li>
+{% endfor %}
+
+
+</ul>
+
+
+

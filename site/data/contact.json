@@ -1,0 +1,15 @@
+{
+  "main_email": "email@email.com",
+  "other_emails": [
+    {
+      "email": "email@email.com",
+      "purpose": "Publicity",
+      "name": "Jill Toker"
+    },
+    {
+      "purpose": "Lectures / Readings / Appearances",
+      "email": "email@email.com",
+      "name": "Regan Dilt"
+    }
+  ]
+}

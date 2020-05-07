@@ -1,0 +1,166 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* purgecss start ignore */
+
+button,
+a,
+input,
+textarea {
+  outline-color: theme("colors.accent1") !important;
+  @apply transition-colors duration-200;
+}
+
+.cmp-button {
+  @apply text-light bg-dark px-6 py-4 inline-block shadow;
+}
+
+.cmp-button:hover {
+  @apply bg-accent1 shadow-none;
+}
+
+.cmp-cover-image {
+  z-index: -1;
+}
+
+.cmp-cover-image img {
+  filter: grayscale(100);
+  z-index: -1;
+  @apply w-full h-full object-cover;
+}
+
+.cmp-full-bleed {
+  margin-left: 50%;
+  transform: translateX(-50%);
+  @apply w-screen overflow-hidden;
+}
+
+.cmp-full-bleed-wrapper {
+  @apply mx-auto max-w-screen-md px-6;
+}
+
+.cmp-h1 {
+  @apply font-title text-4xl mt-4 mb-8;
+}
+
+.cmp-h2 {
+  @apply font-title text-2xl my-4;
+}
+
+@screen lg {
+  .cmp-h1 {
+    @apply text-5xl;
+  }
+
+  .cmp-h2 {
+    @apply text-3xl;
+  }
+}
+
+.cmp-input {
+  @apply block p-2 shadow bg-light w-full;
+}
+
+.cmp-link:hover {
+  @apply text-accent1;
+}
+
+.cmp-link-button {
+  @apply text-light flex bg-dark px-6 py-4 inline-block;
+}
+
+.cmp-link-button:hover {
+  @apply bg-accent1;
+}
+
+.cmp-markdown {
+  @apply pt-4;
+}
+
+.cmp-h1 + .cmp-markdown {
+  @apply pt-0;
+}
+
+.cmp-markdown a {
+  color: theme("colors.accent1");
+}
+
+.cmp-markdown h1 {
+  @apply text-2xl;
+}
+
+.cmp-markdown h2 {
+  @apply text-xl;
+}
+
+.cmp-markdown h3 {
+  @apply text-lg;
+}
+
+.cmp-markdown img {
+  @apply max-w-full	mx-auto;
+}
+
+@screen lg {
+  .cmp-markdown img {
+    @apply max-w-md;
+  }
+}
+
+.cmp-markdown p {
+  @apply py-4;
+}
+
+.cmp-markdown p:first-of-type {
+  @apply pt-0;
+}
+
+.cmp-markdown ul,
+.cmp-markdown ol {
+  @apply ml-4;
+}
+
+.cmp-markdown ul li {
+  @apply list-disc;
+}
+
+.cmp-markdown ol li {
+  @apply list-decimal;
+}
+
+.cmp-markdown blockquote {
+  @apply p-4 bg-gray italic mb-4;
+}
+
+.cmp-markdown blockquote p {
+  @apply p-0;
+}
+
+/* General */
+
+svg {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.ie-only-notice {
+  display: none;
+
+  @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    display: block;
+    position: fixed;
+    opacity: 0.8;
+    background-color: red;
+    font-size: 20px;
+    height: 80px;
+    color: white;
+    text-align: center;
+    padding: 16px;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+}
+
+/* purgecss end ignore */

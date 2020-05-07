@@ -1,0 +1,15 @@
+<nav class="mt-6">
+
+  {% set navPages = collections.all | eleventyNavigation %}
+  {% macro renderNavListItem(entry) -%}
+
+  {% set activeClass %}{% if entry.url == page.url %}cmp-active-link{% endif %}{% endset %}
+    <li class="{{activeClass}}">
+      <a class="cmp-link block px-2 pt-2 md:px-4 uppercase font-title text-lg md:text-xl" href="{{ entry.url | url }}">{{ entry.title }}</a>
+    </li>
+  {%- endmacro %}
+
+  <ul class="flex flex-wrap justify-center items-center flex-col sm:flex-row">
+    {% include "./nav-links.njk" %}
+  </ul>
+</nav>

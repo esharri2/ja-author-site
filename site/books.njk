@@ -1,0 +1,66 @@
+---
+layout: container
+title: Books
+eleventyNavigation:
+  key: Books
+  order: 2
+pagination:
+  data: collections.book
+  size: 36
+  alias: books
+---
+
+
+{% if books.length === 1 %}
+  {# TODO: books[0] didn't work so using loop ? #}
+  {% for book in books %}
+    {# TODO had to flatten data to make it easy to reuse book-detail template
+    What is a better way to do this? #}
+    {% set book = book.data %}
+    {% set blurbs = book.blurbs %}
+    {% set cover = book.cover %}
+    {% set date = book.date %}
+    {% set publisher = book.publisher %}
+    {% set purchase_links = book.purchase_link %}
+    {% set reviews = book.reviews %}
+    {% set synopsis = book.synopsis %}
+    {% set title = book.title %}
+    <h1 class="cmp-h1">{{title}}</h1>
+    {% include "components/book-detail.njk" %} 
+  {% endfor %}
+{% else %}
+  <h1 class="cmp-h1">{{titles.books}}</h1>
+  <div class="font-title grid grid-cols-1 
+    {% if books.length === 2 %}
+      md:grid-cols-2
+    {% elif books.length === 3 %}
+      md:grid-cols-3
+    {% else %}
+      md:grid-cols-4 
+    {% endif %}
+  gap-3 row-gap-6">
+    {% for book in books | reverse %}
+      <div class="mt-4">
+        <a class="group block relative" href="/books/{{book.data.title | slug}}">
+          <img 
+            class="w-full" 
+            srcset="{% srcset book.data.cover %}" 
+            src="{% src book.data.cover %}"
+            sizes="(min-width: 767px) 250px, 100vw" 
+            alt="{{book.data.title}} cover art" />
+          <div class="absolute flex justify-center items-center text-xl text-light bg-accent1 inset-x-0 top-0 h-0 opacity-0 active:none group-hover:h-full group-hover:opacity-75 transition-height duration-200 ease-out ">Learn more</div>
+        </a>
+        <div class="pt-2 uppercase text-md text-center">{{book.data.title}}</div>
+      </div>
+    {% endfor %}
+  </div>
+  {% include "./includes/components/pagination.njk" %}
+{% endif %}
+
+{% if bookspage.show_other %}
+  <div class="my-24">
+    <h1 class="cmp-h2">{{ titles.publications if titles.publications else "Publications" }}</h1>
+    {% include "./includes/components/publication-list.njk" %}
+  </div>
+{% endif %}
+

@@ -1,0 +1,27 @@
+---
+layout: container
+---
+<article>
+    <h1 class="cmp-h1">{{ title }}</h1>
+    {% if date %}
+        <p class="-mt-12">{{date | prettyDate}}</p>
+    {% endif %}
+    {% if image %}
+      {% if cover_image %}
+        <figure class="my-4 mx-auto">
+          <img 
+            class="max-h-lg w-auto mx-auto" 
+            loading="lazy" 
+            srcset="{% srcset cover_image.file %}" 
+            src="{% src cover_image.file %}" 
+            alt="{{cover_image.alt}}"/>
+          {% if cover_image.byline %}
+            <figcaption class="italic flex justify-end text-sm">{{cover_image.byline}}</figcaption>
+          {% endif %}
+        </figure>
+      {% endif %}
+    {% endif %}
+    <div class="cmp-markdown">
+        {{ content | safe}}
+    </div>
+</article>

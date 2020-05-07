@@ -1,0 +1,25 @@
+---
+layout: container
+eleventyComputed:
+  eleventyNavigation:
+    key: "{{titles.contact}}"
+    order: 10
+---
+<h1 class="cmp-h1 text-center">{{ titles.contact if titles.contact else "Contact" }}</h1>
+
+<div class="max-w-screen-sm mx-auto">
+{% for contact in contact.other_emails %}
+  <h2 class="font-title text-xl pt-8">{{contact.purpose}}</h2>
+  <p>{{contact.name}}</p>
+  <a class="cmp-link" href="mailto:{{contact.email}}">{{contact.email}}</a>
+{% endfor %}
+</div>
+<div class="mx-auto max-w-screen-sm">
+{% if contact.other_emails%}
+<h2 class="font-title text-xl pt-8">For general inqueries</h2>
+{% endif %}
+  {% include "./includes/components/contact-form.njk" %}
+  {# <div class="mt-6 flex justify-center text-dark">
+      {% include "./includes/components/social-links.njk" %}
+  </div> #}
+</div>

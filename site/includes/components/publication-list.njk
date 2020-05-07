@@ -1,0 +1,18 @@
+ {% for publication in collections.publication | reverse %}
+    {% set data = publication.data %}
+    <div class="pt-8 first:pt-0">
+      <h2 class="font-title uppercase text-xl">{{data.title}}</h2>
+      <p class="text-lg">
+        <span class="italic">{{data.publisher}}</span> | {{data.date | prettyMonthAndYear}}
+        {% if data.genre %}
+          | {{data.genre}}
+        {% endif %} 
+      </p>
+      {% if data.description %}
+        <p class="pt-4">{{data.description}}</p>
+      {% endif %}
+      {% if data.link %}
+        <a class="cmp-link mt-4 flex items-center fill-current" href="{{data.link}}">Read <span class="w-6 h-6">{% include "../../media/icons/chevron-right.svg" %}</span></a>
+      {% endif %}
+    </div>
+  {% endfor %}

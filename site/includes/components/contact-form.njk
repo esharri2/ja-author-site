@@ -1,0 +1,21 @@
+<form class="font-body" name="contact" method="POST" data-netlify-recaptcha="true" data-netlify="true" netlify-honeypot="bot-field">
+    <p class="hidden">
+        <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
+    </p>
+    <p class="mt-2 py-2">
+        <label>Your Name: <input class="cmp-input" type="text" name="name"/></label>
+    </p>
+    <p class="mt-2 py-2">
+        <label>Your Email: <input class="cmp-input" type="email" name="email"/></label>
+    </p>
+    <p class="mt-2 py-2">
+        <label>Message: <textarea class="cmp-input h-40" name="message"></textarea>
+        </label>
+    </p>
+    <div class="mt-2 py-2">
+        <div data-netlify-recaptcha="true"></div>
+    </div>
+    <p>
+        <button class="mt-2 cmp-button w-full" type="submit">Send</button>
+    </p>
+</form>
