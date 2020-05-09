@@ -1,23 +1,25 @@
 const headerHeight = "5rem";
-const smoke = "#F5F5F5";
-const eerie = "#261C15";
-const moss = "#58641D";
-const sapphire = "#176087";
+
 const lightGray = "#EDEDED";
+const raisinblack = "#262626";
+const rubyred = "#a20021";
+const cosmiclatte = "#fff8e8";
+const russianviolet = "#240b36";
+
 
 module.exports = {
   theme: {
     colors: {
-      light: smoke,
-      dark: eerie,
-      accent1: sapphire,
-      accent2: moss,
+      light: cosmiclatte,
+      dark: raisinblack,
+      accent1: rubyred,
+      accent2: russianviolet,
       transparent: "transparent",
       gray: lightGray
     },
     fontFamily: {
-      title: ["Spartan", "Helvetica", "san serif"],
-      body: ["Roboto", "Helvetica", "san serif"],
+      title: ["Cutive Mono", "Consolas", "Courier", "monospace"],
+      body: ["Lora", "Times New Roman", "serif"],
     },
     extend: {
       fontSize: {

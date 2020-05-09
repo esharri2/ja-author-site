@@ -4,6 +4,10 @@
 
 /* purgecss start ignore */
 
+html {
+  @apply font-body;
+}
+
 button,
 a,
 input,
@@ -137,7 +141,59 @@ textarea {
   @apply p-0;
 }
 
-/* General */
+/* Home page */
+
+.cmp-home-container img:first-of-type {
+  top: 5%;
+  /* width: 600px; */
+}
+
+@screen lg {
+  .cmp-home-container img:first-of-type {
+    top: 15%;
+  }
+}
+
+.cmp-home-container img:nth-of-type(2) {
+  right: 0%;
+  top: 70%;
+}
+
+.cmp-home-container img:nth-of-type(3) {
+  top: 45%;
+  right: 0%;
+  width: 155px;
+}
+
+@screen lg {
+  .cmp-home-container img:nth-of-type(3) {
+    right: 25%;
+  }
+}
+
+.cmp-home-container img:nth-of-type(4) {
+  bottom: 10%;
+}
+
+.cmp-home-container img {
+  @apply absolute;
+  z-index: -1;
+}
+
+@screen sm {
+  h1:after {
+    content: "";
+    height: 75vh;
+    width: 10px;
+    transform: rotate(35deg);
+    right: 100px;
+    top: 20%;
+    @apply block bg-accent1 absolute;
+    z-index: -2;
+  }
+}
+
+/*Misc*/
 
 svg {
   max-width: 100%;

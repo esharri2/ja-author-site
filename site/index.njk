@@ -3,21 +3,60 @@ layout: default
 ---
     {% set hasFeaturedBook = "fart" %}
 
-<div class="kf-fade-in h-screen flex flex-col justify-center items-center z-10">
+<div class="cmp-home-container h-screen flex flex-col justify-center z-10 relative max-w-md">
   <div class="mb-4">
-    <h1 class="text-6xl text-center sm:text-8xl leading-none font-title uppercase">{{general.site_title}}</h1>
+    <h1 class="text-4xl sm:text-6xl leading-none font-title uppercase">{{general.site_title}}</h1>
     {% if general.site_subtitle %}
-      <p class="text-center">{{general.site_subtitle}}</p>
+      <p class="text-center font-title">{{general.site_subtitle}}</p>
     {% endif %}
   </div>
+     <img 
+      class="absolute"
+      sizes="200px" 
+      srcset="{% srcset 'media/skullheadtiny.png' %}"  
+      src="{% src 'media/skullheadtiny.png' %}"/>
+    {# <img 
+      class="absolute"
+      sizes="200px" 
+      srcset="{% srcset 'media/tinyplum.png' %}"  
+      src="{% src 'media/tinyplum.png' %}"/> #}
+    <img 
+      sizes="200px"
+      srcset="{% srcset 'media/twoplum.png' %}"  
+      src="{% src 'media/twoplum.png' %}"/>
+    <img 
+      sizes="200px"
+      srcset="{% srcset 'media/gun.jpg' %}"  
+      src="{% src 'media/gun.jpg' %}"/>
+    {# <img 
+      sizes="200px"
+      srcset="{% srcset 'media/hoodwomantiny.png' %}"  
+      src="{% src 'media/hoodwomantiny.png' %}"/> #}
+    <img 
+      sizes="200px"
+      srcset="{% srcset 'media/skinhorse.png' %}"  
+      src="{% src 'media/skinhorse.png' %}"/>
+    {# <img 
+      sizes="200px" 
+      srcset="{% srcset 'media/tinywidget.png' %}"  
+      src="{% src 'media/tinywidget.png' %}"/> #}
   {% include "components/nav-simple.njk" %} 
 </div>
-<div class="cmp-cover-image fixed inset-0">
+
+{# <div class="w=48 relative ">
+  <div class="absolute inset-0 bg-accent1 opacity-50 z-10"></div>
+    <img 
+      class="w-full" 
+      srcset="{% srcset 'media/sky-light.jpg' %}"  
+      src="{% src 'media/sky-light.jpg' %}"/>
+</div> #}
+
+{# <div class="cmp-cover-image fixed inset-0">
   <img 
-    class="cmp-cover-image kf-slight-fade-in" 
-    srcset="{% srcset 'media/plant-close.jpg' %}"  
-    src="{% src 'media/plant-close.jpg' %}"/>
-</div>
+    class="cmp-cover-image" 
+    srcset="{% srcset 'media/sky-light.jpg' %}"  
+    src="{% src 'media/sky-light.jpg' %}"/>
+</div> #}
 
 {% for book in collections.book | reverse %}
   {% if book.data.title == featured.title and featured.show == true %}
