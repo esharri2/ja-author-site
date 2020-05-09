@@ -150,7 +150,7 @@ textarea {
 
 @screen lg {
   .cmp-home-container img:first-of-type {
-    top: 15%;
+    top: 10%;
   }
 }
 
@@ -160,14 +160,14 @@ textarea {
 }
 
 .cmp-home-container img:nth-of-type(3) {
-  top: 45%;
+  top: 48%;
   right: 0%;
   width: 155px;
 }
 
 @screen lg {
   .cmp-home-container img:nth-of-type(3) {
-    right: 25%;
+    right: 19%;
   }
 }
 
