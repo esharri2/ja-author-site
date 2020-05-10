@@ -70,6 +70,10 @@ textarea {
   @apply text-accent1;
 }
 
+.cmp-link.cmp-link-underline {
+  padding-left: 0
+}
+
 .cmp-link.cmp-link-underline::after {
     content: '';
     display: block;
@@ -81,7 +85,7 @@ textarea {
 }
 
 .cmp-link.cmp-link-underline:hover::after {
-      width: 10%;
+      width: 2rem;
 }
 
 .cmp-link-button {

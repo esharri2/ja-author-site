@@ -5,7 +5,7 @@
 
   {% set activeClass %}{% if entry.url == page.url %}cmp-active-link{% endif %}{% endset %}
     <li class="{{activeClass}}">
-      <a class="cmp-link cmp-link-underline block px-2 pt-2 md:px-4 uppercase font-title text-lg md:text-xl" href="{{ entry.url | url }}">{{ entry.title }}</a>
+      <a class="cmp-link cmp-link-underline inline-block px-2 pt-2 md:px-4 uppercase font-title text-lg md:text-xl" href="{{ entry.url | url }}">{{ entry.title }}</a>
     </li>
   {%- endmacro %}
 
