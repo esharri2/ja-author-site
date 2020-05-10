@@ -70,6 +70,20 @@ textarea {
   @apply text-accent1;
 }
 
+.cmp-link.cmp-link-underline::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 1px;
+    background:theme("colors.accent1");
+    /* background:blue; */
+    transition: width .3s;
+}
+
+.cmp-link.cmp-link-underline:hover::after {
+      width: 10%;
+}
+
 .cmp-link-button {
   @apply text-light flex bg-dark px-6 py-4 inline-block;
 }
@@ -77,6 +91,8 @@ textarea {
 .cmp-link-button:hover {
   @apply bg-accent1;
 }
+
+
 
 .cmp-markdown {
   @apply pt-4;
@@ -145,12 +161,17 @@ textarea {
 
 .cmp-home-container img:first-of-type {
   top: 5%;
-  /* width: 600px; */
 }
 
 @screen lg {
   .cmp-home-container img:first-of-type {
     top: 10%;
+  }
+}
+
+@media screen and (max-height: 800px) {
+  .cmp-home-container img:first-of-type {
+    top: 5%;
   }
 }
 
@@ -162,12 +183,13 @@ textarea {
 .cmp-home-container img:nth-of-type(3) {
   top: 48%;
   right: 0%;
-  width: 155px;
+  /* width: 155px; */
 }
 
 @screen lg {
   .cmp-home-container img:nth-of-type(3) {
     right: 19%;
+    width: 155px;
   }
 }
 
