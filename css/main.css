@@ -203,7 +203,7 @@ textarea {
 }
 
 @screen sm {
-  h1:after {
+  .cmp-home-container h1:after {
     content: "";
     height: 75vh;
     width: 10px;
