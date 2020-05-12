@@ -36,6 +36,9 @@ module.exports = {
         "80": ".8",
         "90": ".9",
       },
+      screens: {
+        "xs": '350px',
+      },
       spacing: {
         "almost-full": "90vh",
         header: headerHeight,
