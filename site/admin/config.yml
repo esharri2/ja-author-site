@@ -362,7 +362,8 @@ collections: # A list of collections the CMS should be able to edit
               widget: "string",
               required: true,
             }
-          - { label: "Link", name: "purpose", widget: "string", required: true }
+          - { label: "Link", name: "link", widget: "string", required: true }
+          - { label: "Review title", name: "title", widget: "string", required: false }
   - name: "publications"
     label: "Other publications"
     label_singular: "publication"

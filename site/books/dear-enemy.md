@@ -19,7 +19,9 @@ blurbs:
     attribution: Vi Khi Nao
 reviews:
   - publication: The Village Voice
-    purpose: https://www.villagevoice.com/2017/12/07/dear-enemy-guides-readers-through-a-landscape-where-rules-dont-apply/
+    link: https://www.villagevoice.com/2017/12/07/dear-enemy-guides-readers-through-a-landscape-where-rules-dont-apply/
+    title: "'Dear Enemy' Guides Readers Through a Landscape Where Rules Don’t Apply"
   - publication: decomP
-    purpose: https://www.decompmagazine.com/dearenemy.htm
+    link: https://www.decompmagazine.com/dearenemy.htm
+    title: "A Review of Dear Enemy by Jessica Alexander"
 ---
