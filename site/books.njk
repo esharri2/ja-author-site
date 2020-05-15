@@ -1,9 +1,10 @@
 ---
 layout: container
 title: Books
-eleventyNavigation:
-  key: Books
-  order: 2
+eleventyComputed:
+  eleventyNavigation:
+    key: "{{titles.books}}"
+    order: 2
 pagination:
   data: collections.book
   size: 36
@@ -21,7 +22,7 @@ pagination:
     {% set cover = book.cover %}
     {% set date = book.date %}
     {% set publisher = book.publisher %}
-    {% set purchase_links = book.purchase_link %}
+    {% set purchase_links = book.purchase_links %}
     {% set reviews = book.reviews %}
     {% set synopsis = book.synopsis %}
     {% set title = book.title %}
@@ -48,7 +49,7 @@ pagination:
             src="{% src book.data.cover %}"
             sizes="(min-width: 767px) 250px, 100vw" 
             alt="{{book.data.title}} cover art" />
-          <div class="absolute flex justify-center items-center text-xl text-light bg-accent1 inset-x-0 top-0 h-0 opacity-0 active:none group-hover:h-full group-hover:opacity-75 transition-height duration-200 ease-out ">Learn more</div>
+          <div class="absolute flex justify-center items-center text-xl text-light bg-accent2 inset-x-0 top-0 h-0 opacity-0 active:none group-hover:h-full group-hover:opacity-75 transition-height duration-200 ease-out ">More</div>
         </a>
         <div class="pt-2 uppercase text-md text-center">{{book.data.title}}</div>
       </div>

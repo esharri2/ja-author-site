@@ -17,7 +17,7 @@ textarea {
 }
 
 .cmp-button {
-  @apply text-light bg-dark px-6 py-4 inline-block shadow;
+  @apply text-light bg-accent2 px-6 py-4 inline-block shadow font-title uppercase;
 }
 
 .cmp-button:hover {
@@ -63,7 +63,7 @@ textarea {
 }
 
 .cmp-input {
-  @apply block p-2 shadow bg-light w-full;
+  @apply block p-2 border-accent2 border bg-light w-full mt-2;
 }
 
 .cmp-link:hover {
@@ -86,10 +86,11 @@ textarea {
 
 .cmp-link.cmp-link-underline:hover::after {
   width: 2rem;
+  width: 100%;
 }
 
 .cmp-link-button {
-  @apply text-light flex bg-dark px-6 py-4 inline-block;
+  @apply text-light flex bg-accent2 px-6 py-4 inline-block;
 }
 
 .cmp-link-button:hover {

@@ -199,12 +199,11 @@ collections: # A list of collections the CMS should be able to edit
         file: "site/data/contact.json"
         fields:
           - {
-              label: "Main contact email",
-              name: "main_email",
+              label: "Lead-in text for contact form",
+              name: "contact_form_leadin",
               widget: "string",
               hint:
-                "The contact form will send email to this address. This address
-                won't appear in any way on the website.",
+                "Use this to add text above your contact form, e.g. 'For general inquires:'. Leave blank if you don't need it.",
             }
           - label: "Other contact emails"
             description:

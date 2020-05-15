@@ -4,6 +4,10 @@ eleventyComputed:
   eleventyNavigation:
     key: "{{titles.services}}"
     order: 6
+pagination:
+  data: collections.service
+  size: 100
+  alias: events
 ---
 
 <h1 class="cmp-h1">{{ titles.services if titles.services else "Services" }}</h1>
