@@ -17,15 +17,15 @@ pagination:
     {% set slug = post.fileSlug %}
     {% set post = post.data %}
 
-    <article class="mt-20 first:mt-8">
-      <h2 class="cmp-h2">{{ post.title }}</h2>
+    <article class="mt-20 first:mt-0">
+      <h2 class="cmp-h2 inline-block">{{ post.title }}</h2>
       {% if post.date %}
-        <p>{{post.date | prettyDate}}</p>
+        <p class="font-title text-md"> {{post.date | prettyDate}}</p>
       {% endif %}
       <div class="js-click-copy mt-4">
-        <button class="flex items-center text-sm">
-          <div class="js-copy-icon w-8 h-8 mr-2">{% include "./media/icons/copy.svg" %}</div>
-          <div class="js-success-icon w-8 h-8 mr-2 hidden">{% include "./media/icons/checkmark.svg" %}</div> 
+        <button class="flex items-center text-sm font-title text-md hover:color-accent1">
+          <div class="js-copy-icon w-6 h-6 mr-2">{% include "./media/icons/copy.svg" %}</div>
+          <div class="js-success-icon w-6 h-6 mr-2 hidden">{% include "./media/icons/checkmark.svg" %}</div> 
           Copy a link to this post
         </button>
       <input type="text" value="https://{{general.site_domain}}/posts/{{slug}}" class="hidden"/>

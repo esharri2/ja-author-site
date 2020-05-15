@@ -45,7 +45,7 @@ textarea {
 }
 
 .cmp-h1 {
-  @apply font-title text-4xl mt-4 mb-8;
+  @apply font-title text-4xl mt-4 mb-6;
 }
 
 .cmp-h2 {

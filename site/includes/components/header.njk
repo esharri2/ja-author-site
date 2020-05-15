@@ -1,10 +1,10 @@
 <header class="z-20 w-full relative h-header flex items-center 
-lg:pt-6 lg:pl-6 lg:justify-between lg:block">     
+lg:pt-12 lg:pl-6 lg:w-56 lg:bg-transparent lg:h-auto lg:justify-between lg:block lg:fixed">     
   {# Nav is sr-only; sr users to not need this toggle button #}
   <button class="mx-4 text-dark fill-current w-8 h-8 js-nav-toggle lg:hidden" aria-hidden="true">
     <span class="js-open-icon inline">{% include "../../media/icons/menu.svg" %}</span>
     <span class="js-close-icon hidden">{% include "../../media/icons/cross.svg" %}</span>
   </button>
-  <a class="font-title text-2xl uppercase lg:pr-4 lg:self-stretch lg:flex lg:items-center" href="/">{{general.site_title}}</a>  
+  <a class="font-title text-2xl uppercase lg:pr-4 lg:self-stretch lg:flex lg:items-center lg:pb-6" href="/">{{general.site_title}}</a>  
   {% include "./nav.njk" %}
 </header>

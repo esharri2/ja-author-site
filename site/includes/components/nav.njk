@@ -8,12 +8,12 @@
 
   {% set activeClass %}{% if entry.url == page.url %}cmp-active-link{% endif %}{% endset %}
 
-  <li class="{{activeClass}} lg:first:-ml-6">
-    <a class="cmp-link cmp-link-underline uppercase font-title block p-6 lg:py-4" href="{{ entry.url | url }}">{{ entry.title }}</a>
+  <li class="{{activeClass}} lg:-ml-6">
+    <a class="cmp-link cmp-link-underline uppercase font-title block p-6 lg:py-2" href="{{ entry.url | url }}">{{ entry.title }}</a>
   </li>
   {%- endmacro %}
 
-  <ul class="flex flex-col w-full lg:flex-row lg:w-auto shadow-lg lg:shadow-none">
+  <ul class="flex flex-col w-full shadow-lg lg:flex-col lg:w-auto lg:shadow-none">
     {% include "./nav-links.njk" %}
   </ul>
 </nav>

@@ -38,6 +38,7 @@ module.exports = {
       },
       screens: {
         "xs": '350px',
+        "xxl": '1500px'
       },
       spacing: {
         "almost-full": "90vh",
@@ -55,6 +56,7 @@ module.exports = {
     margin: ["first", "last", "responsive"],
     opacity: ["group-hover"],
     padding: ["first", "last", "responsive"],
-    borderStyle: ["last", "responsive"]
+    borderStyle: ["last", "responsive"],
+    color: ["hover", "responsive"]
   },
 };
