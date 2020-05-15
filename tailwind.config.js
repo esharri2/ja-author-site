@@ -1,4 +1,4 @@
-const headerHeight = "5rem";
+const headerHeight = "7rem";
 
 const lightGray = "#EDEDED";
 const raisinblack = "#262626";
