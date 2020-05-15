@@ -71,7 +71,7 @@ textarea {
 }
 
 .cmp-link.cmp-link-underline {
-  padding-left: 0;
+  /* padding-left: 0; */
 }
 
 .cmp-link.cmp-link-underline::after {

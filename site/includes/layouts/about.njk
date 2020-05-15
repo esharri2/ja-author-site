@@ -8,7 +8,7 @@ eleventyComputed:
 <h1 class="cmp-h1">{{ titles.about if titles.about else "About" }}</h1>
 <div class="cmp-markdown">
   {% if author_image.file%}
-    <figure class="p-2 mb-4 ml-4 md:max-w-md md:float-right">
+    <figure class="p-2 mb-4 md:ml-4 md:max-w-md md:float-right">
         <img alt="" srcset="{% srcset author_image.file %}" src="{% src author_image.file %}">
         {% if author_image.byline %}
           <figcaption class="italic flex justify-end text-sm">{{author_image.byline}}</figcaption>
