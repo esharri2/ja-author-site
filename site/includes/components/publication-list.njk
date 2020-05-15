@@ -2,7 +2,7 @@
     {% set data = publication.data %}
     <div class="pt-8 first:pt-0">
       <h2 class="font-title uppercase text-xl">{{data.title}}</h2>
-      <p class="text-lg">
+      <p class="text-md font-title">
         <span class="italic">{{data.publisher}}</span> | {{data.date | prettyMonthAndYear}}
         {% if data.genre %}
           | {{data.genre}}
