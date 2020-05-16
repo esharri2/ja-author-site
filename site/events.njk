@@ -11,20 +11,29 @@ pagination:
 ---
 <h1 class="cmp-h1">{{ titles.events if titles.events else "Events" }}</h1>
 
+{% set futureEvents = events | getFutureItems %}
+{% set pastEvents = events | getPastItems %}
+
+
+<h2 class="cmp-h2">Upcoming events</h2>
+
 <ul>
-{% for event in events | reverse %}
-  <li class="py-4 first:pt-0">
-    <p class="text-xl">{{event.data.title}}</p>
-    <p>{{event.data.date | prettyDateAndTime}}</p> 
-    <p>{{event.data.location}}</p>
-    {% if event.data.description %}
-      <p class="block mt-2">{{event.data.description}}</p>
-    {% endif %}
-  </li>
+{% if futureEvents.length > 0%}
+{% else %}
+<p>There are no upcoming events.</p>
+{% endif %}
+{% for event in futureEvents | reverse %}
+  {% include "./includes/components/event-listing.njk" %}
 {% endfor %}
-
-
 </ul>
 
+{% if pastEvents.length > 0 %}
+<h2 class="cmp-h2">Past events</h2>
+<ul>
+  {% for event in pastEvents | reverse %}
+    {% include "./includes/components/event-listing.njk" %}
+  {% endfor %}
+</ul>
+{% endif %}
 
 

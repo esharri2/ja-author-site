@@ -1,5 +1,5 @@
 const markdown = require("markdown-it")({
-  html: true
+  html: true,
 });
 const path = require("path");
 const addSrcSet = require("./site/transforms/addSrcSet.js");
@@ -7,10 +7,7 @@ const minifyHTML = require("./site/transforms/minifyHTML.js");
 
 const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
 
-
-
-module.exports = config => {
-
+module.exports = (config) => {
   // Plugins
   config.addPlugin(eleventyNavigationPlugin);
 
@@ -21,17 +18,19 @@ module.exports = config => {
 
   // Include our static assets
   config.addPassthroughCopy("site/admin");
-  config.addPassthroughCopy({"site/media/uploads" : "/media/source"});
+  config.addPassthroughCopy({ "site/media/uploads": "/media/source" });
   config.addPassthroughCopy({ "site/media/art": "/media/source" });
-  config.addPassthroughCopy({"site/media/site_icons": "/" });
+  config.addPassthroughCopy({ "site/media/site_icons": "/" });
   config.addPassthroughCopy({ "site/assets": "/" });
   config.setUseGitIgnore(false);
 
   // Short codes
-  config.addPairedShortcode("markdown", content => markdown.render(content));
-  config.addNunjucksShortcode("currentYear", () => new Date().getFullYear().toString());
-  config.addNunjucksShortcode("srcset", img => {
-    const {dir, name, ext} = path.parse(img);
+  config.addPairedShortcode("markdown", (content) => markdown.render(content));
+  config.addNunjucksShortcode("currentYear", () =>
+    new Date().getFullYear().toString()
+  );
+  config.addNunjucksShortcode("srcset", (img) => {
+    const { dir, name, ext } = path.parse(img);
     // TODO this duplicates size names and sizes that are in imageConverter.js; could be simplified.
     return `
       ${dir}/${name}-lg${ext} 1080w, 
@@ -39,12 +38,11 @@ module.exports = config => {
       ${dir}/${name}-sm${ext} 480w
     `;
   });
-    config.addNunjucksShortcode("src", (img) => {
-      const { dir, name, ext } = path.parse(img);
-      // TODO this duplicates size names and sizes that are in imageConverter.js; could be simplified.
-      return `${dir}/${name}-md${ext}`;
-    });
-
+  config.addNunjucksShortcode("src", (img) => {
+    const { dir, name, ext } = path.parse(img);
+    // TODO this duplicates size names and sizes that are in imageConverter.js; could be simplified.
+    return `${dir}/${name}-md${ext}`;
+  });
 
   // Filters
   config.addFilter("prettyDateAndTime", (value) => {
@@ -52,12 +50,15 @@ module.exports = config => {
     const options = {
       hour: "numeric",
       minute: "numeric",
-      hour12: true
+      hour12: true,
     };
-    return `${date.toLocaleDateString('en-US')} - ${date.toLocaleTimeString('en-us', options)}`
+    return `${date.toLocaleDateString("en-US")} - ${date.toLocaleTimeString(
+      "en-us",
+      options
+    )}`;
   });
 
-  config.addFilter("prettyDate", value => {
+  config.addFilter("prettyDate", (value) => {
     const date = new Date(Date.parse(value));
     return date.toLocaleDateString("en-US");
   });
@@ -70,9 +71,23 @@ module.exports = config => {
     });
   });
 
+  const currentUnixTime = new Date().getTime();
+  const getUnixTime = (dateString) => new Date(dateString).getTime();
+
+  config.addFilter("getPastItems", (items) =>
+    items.filter((item) => getUnixTime(item.data.date) < currentUnixTime)
+  );
+
+  config.addFilter("getFutureItems", (items) => {
+    const futureItems = items.filter((item) => {
+      return getUnixTime(item.data.date) >= currentUnixTime;
+    });
+    return futureItems;
+  });
+
   // Transforms
-  config.addTransform("add srcset", addSrcSet );
-  config.addTransform("minify html", minifyHTML );
+  config.addTransform("add srcset", addSrcSet);
+  config.addTransform("minify html", minifyHTML);
 
   return {
     templateFormats: ["md", "njk", "json"],
@@ -83,7 +98,7 @@ module.exports = config => {
       input: "site",
       output: "dist",
       includes: "includes",
-      data: "data"
-    }
+      data: "data",
+    },
   };
 };
