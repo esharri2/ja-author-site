@@ -27,7 +27,7 @@
         {% endfor %}
         </div>
     </div>
-    {% if reviews %}<h2 class="cmp-h2">Reviews and Press</h2>{% endif %}
+    {% if reviews.length > 0 %}<h2 class="cmp-h2">Reviews and Press</h2>{% endif %}
     {% for review in reviews %}
             <a class="my-4 cmp-link block" href="{{review.link}}">{{review.title}}{% if review.title %} | {% endif %}<span class="italic underline">{{review.publication}}</span></a>
     {% endfor %}
