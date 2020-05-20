@@ -153,6 +153,8 @@ collections: # A list of collections the CMS should be able to edit
     files:
       - name: "bio"
         label: "Bio"
+        editor:
+          preview: false
         format: "frontmatter"
         file: "site/about.md"
         fields:
@@ -189,6 +191,8 @@ collections: # A list of collections the CMS should be able to edit
             editorComponents: []
   - name: "contact"
     label: "Contact information"
+    editor:
+      preview: false
     description: "Contact information and social media links."
     files:
       - name: "contact"
@@ -252,6 +256,8 @@ collections: # A list of collections the CMS should be able to edit
             }
   - name: "posts"
     label: "News items"
+    editor:
+      preview: false
     label_singular: "news item"
     folder: "site/posts"
     create: true
@@ -294,6 +300,8 @@ collections: # A list of collections the CMS should be able to edit
         editorComponents: ["image"]
   - name: "books"
     label: "Books"
+    editor:
+      preview: false
     label_singular: "book"
     folder: "site/books"
     create: true
@@ -371,9 +379,11 @@ collections: # A list of collections the CMS should be able to edit
               widget: "string",
               required: false,
             }
-  - name: "publications"
+  - name: "publications"   
     label: "Other publications"
     label_singular: "publication"
+    editor:
+      preview: false
     description: "Non-book publications"
     folder: "site/publications"
     create: true
@@ -415,6 +425,8 @@ collections: # A list of collections the CMS should be able to edit
   - name: "events"
     label: "Events"
     label_singular: "event"
+    editor:
+      preview: false
     description: "Schedule of events"
     folder: "site/events"
     create: true
@@ -438,6 +450,8 @@ collections: # A list of collections the CMS should be able to edit
     label: "Services"
     label_singular: "service"
     description: "A list of freelance services you offer"
+    editor:
+      preview: false
     folder: "site/services"
     create: true
     fields:
