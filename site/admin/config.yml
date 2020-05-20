@@ -114,7 +114,7 @@ collections: # A list of collections the CMS should be able to edit
               collection: "books",
               searchFields: ["title"],
               valueField: "title",
-              multiple: false
+              multiple: false,
             }
           - {
               label: "Show featured book on home page",
@@ -122,8 +122,7 @@ collections: # A list of collections the CMS should be able to edit
               widget: "boolean",
               required: true,
               default: false,
-              hint:
-                "You can set one of your books 'featured' to have it display
+              hint: "You can set one of your books 'featured' to have it display
                 prominently on the site (the location depends on how your site has
                 been designed.) You don't have to mark any of your books as
                 'featured'.",
@@ -134,8 +133,7 @@ collections: # A list of collections the CMS should be able to edit
               widget: "string",
               required: false,
               default: "Available now",
-              hint:
-                "Some text to show before the book featured on your home page, such as 'Coming soon' or 'Available now'",
+              hint: "Some text to show before the book featured on your home page, such as 'Coming soon' or 'Available now'",
             }
       - name: "bookspage"
         label: "Books page settings"
@@ -147,8 +145,7 @@ collections: # A list of collections the CMS should be able to edit
               widget: "boolean",
               required: true,
               default: false,
-              hint:
-                "By default your books and other publications are on two separate pages. Select this option to show your other publications at the bottom of the books page",
+              hint: "By default your books and other publications are on two separate pages. Select this option to show your other publications at the bottom of the books page",
             }
   - name: "bio"
     label: "Bio"
@@ -202,12 +199,10 @@ collections: # A list of collections the CMS should be able to edit
               label: "Lead-in text for contact form",
               name: "contact_form_leadin",
               widget: "string",
-              hint:
-                "Use this to add text above your contact form, e.g. 'For general inquires:'. Leave blank if you don't need it.",
+              hint: "Use this to add text above your contact form, e.g. 'For general inquires:'. Leave blank if you don't need it.",
             }
           - label: "Other contact emails"
-            description:
-              "Emails for special cases, such as bookings or reviews."
+            description: "Emails for special cases, such as bookings or reviews."
             name: "other_emails"
             widget: "list"
             fields:
@@ -261,7 +256,7 @@ collections: # A list of collections the CMS should be able to edit
     folder: "site/posts"
     create: true
     description: "Updates and announcements."
-    fields: 
+    fields:
       - label: "Title"
         name: "title"
         widget: "string"
@@ -276,12 +271,7 @@ collections: # A list of collections the CMS should be able to edit
         widget: "object"
         required: false
         fields:
-          - {
-              label: "Image",
-              name: "file",
-              widget: "image",
-              required: true,
-            }
+          - { label: "Image", name: "file", widget: "image", required: true }
           - {
               label: "Byline",
               name: "byline",
@@ -293,7 +283,7 @@ collections: # A list of collections the CMS should be able to edit
               name: "alt",
               widget: "string",
               required: false,
-              hint: "This is how your image will be described to someone using a screen reader. You can leave this blank if the image is purely decorative."
+              hint: "This is how your image will be described to someone using a screen reader. You can leave this blank if the image is purely decorative.",
             }
       - label: "Body"
         name: "body"
@@ -343,7 +333,13 @@ collections: # A list of collections the CMS should be able to edit
               widget: "string",
               required: true,
             }
-          - { label: "Link", name: "link", widget: "string", required: true }
+          - {
+              label: "Link",
+              name: "link",
+              hint: "You must include https:// or http:// in front of the link, e.g. 'https://www.google.com' ",
+              widget: "string",
+              required: true,
+            }
       - label: "Blurbs"
         name: "blurbs"
         widget: "list"
@@ -362,8 +358,19 @@ collections: # A list of collections the CMS should be able to edit
               widget: "string",
               required: true,
             }
-          - { label: "Link", name: "link", widget: "string", required: true }
-          - { label: "Review title", name: "title", widget: "string", required: false }
+          - {
+              label: "Link",
+              name: "link",
+              hint: "You must include https:// or http:// in front of the link, e.g. 'https://www.google.com' ",
+              widget: "string",
+              required: true,
+            }
+          - {
+              label: "Review title",
+              name: "title",
+              widget: "string",
+              required: false,
+            }
   - name: "publications"
     label: "Other publications"
     label_singular: "publication"
@@ -398,7 +405,13 @@ collections: # A list of collections the CMS should be able to edit
           format: "YYYY-MM-DD",
           required: true,
         }
-      - { label: "Link", name: "link", widget: "string", required: false }
+      - {
+          label: "Link",
+          name: "link",
+          widget: "string",
+          required: false,
+          hint: "You must include https:// or http:// in front of the link, e.g. 'https://www.google.com' ",
+        }
   - name: "events"
     label: "Events"
     label_singular: "event"
