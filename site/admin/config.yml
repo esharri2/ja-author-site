@@ -203,6 +203,7 @@ collections: # A list of collections the CMS should be able to edit
               label: "Lead-in text for contact form",
               name: "contact_form_leadin",
               widget: "string",
+              required: false,
               hint: "Use this to add text above your contact form, e.g. 'For general inquires:'. Leave blank if you don't need it.",
             }
           - label: "Other contact emails"
