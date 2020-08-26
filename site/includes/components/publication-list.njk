@@ -11,7 +11,9 @@ publication.data %}
   {% if data.description %}
   <p class="pt-4">{{ data.description }}</p>
   {% endif %} {% if data.link %}
-  <a class="cmp-link mt-4 flex items-center fill-current" href="{{ data.link }}"
+  <a
+    class="cmp-link mt-2 flex items-center fill-current font-title"
+    href="{{ data.link }}"
     >Read
     <span class="w-6 h-6"
       >{% include "../../media/icons/chevron-right.svg" %}</span
