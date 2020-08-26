@@ -5,17 +5,25 @@ eleventyComputed:
     key: "{{titles.about}}"
     order: 1
 ---
+
 <h1 class="cmp-h1">{{ titles.about if titles.about else "About" }}</h1>
 <div class="flex flex-col-reverse md:flex-row">
   <div class="cmp-markdown">
-      {{ content | safe }}
+    {{ content | safe }}
   </div>
   {% if author_image.file%}
-  <figure class="p-2 mb-4 md:w-2/5 md:flex-shrink-0">
-      <img alt="" class="w-full" srcset="{% srcset author_image.file %}" src="{% src author_image.file %}">
-      {% if author_image.byline %}
-        <figcaption class="italic flex justify-end text-sm">{{author_image.byline}}</figcaption>
-      {% endif %}
+  <figure class="p-2 mb-4 pt-4 md:pl-12 md:w-2/5 md:flex-shrink-0">
+    <img
+      alt=""
+      class="w-full"
+      srcset="{% srcset author_image.file %}"
+      src="{% src author_image.file %}"
+    />
+    {% if author_image.byline %}
+    <figcaption class="italic flex justify-end text-sm">
+      {{ author_image.byline }}
+    </figcaption>
+    {% endif %}
   </figure>
   {% endif %}
 </div>
