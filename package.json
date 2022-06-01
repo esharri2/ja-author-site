@@ -51,6 +51,6 @@
     "html-minifier": "^4.0.0",
     "markdown-it-responsive": "^0.1.0",
     "rimraf": "^3.0.2",
-    "sharp": "^0.25.2"
+    "sharp": "^0.30.5"
   }
 }
