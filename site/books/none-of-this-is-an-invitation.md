@@ -1,5 +1,5 @@
 ---
-title: NONE OF THIS IS AN INVITATION
+title: None of This Is an Invitation
 publisher: Astrophil Press
 genre: Mystery/horror
 synopsis: >+
