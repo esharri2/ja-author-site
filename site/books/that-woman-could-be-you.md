@@ -1,5 +1,5 @@
 ---
-title: THAT WOMAN COULD BE YOU
+title: That Woman Could Be You
 publisher: BlazeVOX
 genre: Nonfiction/poetry
 synopsis: "That Woman Could Be You is an orphic documentary of the circadian, an
