@@ -1,7 +1,11 @@
-const sharp = require("sharp");
-const path = require("path");
-const glob = require("glob");
-const del = require("del");
+// const sharp = require("sharp");
+import sharp from "sharp";
+import path from "path";
+// const path = require("path");
+import glob from "glob";
+// const glob = require("glob");
+// const del = require("del");
+import { deleteAsync } from "del";
 
 const mediaDir = "./dist/media/source/*.*";
 const sizes = [
@@ -38,15 +42,10 @@ const init = () => {
     })
   )
     .then(async (values) => {
-      const deletePaths = await del(["dist/media/source/*"]);
+      const deletePaths = await deleteAsync(["dist/media/source/*"]);
       console.log(`${deletePaths.length} images have been deleted.`);
     })
     .catch((error) => console.error(error));
-
-  // (async () => {
-  //   const deletePaths = await del(["dist/media/source/*"]);
-  //   console.log(`${deletePaths.length} images have been deleted.`);
-  // })();
 };
 
 init();

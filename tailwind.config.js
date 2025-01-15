@@ -6,8 +6,8 @@ const rubyred = "#a20021";
 const cosmiclatte = "#fff8e8";
 const russianviolet = "#240b36";
 
-
 module.exports = {
+  content: ["./site/**/*.{html,njk}"],
   theme: {
     colors: {
       light: cosmiclatte,
@@ -15,7 +15,7 @@ module.exports = {
       accent1: rubyred,
       accent2: russianviolet,
       transparent: "transparent",
-      gray: lightGray
+      gray: lightGray,
     },
     fontFamily: {
       title: ["Cutive Mono", "Consolas", "Courier", "monospace"],
@@ -33,12 +33,12 @@ module.exports = {
         lg: "40rem",
       },
       opacity: {
-        "80": ".8",
-        "90": ".9",
+        80: ".8",
+        90: ".9",
       },
       screens: {
-        "xs": '350px',
-        "xxl": '1500px'
+        xs: "350px",
+        xxl: "1500px",
       },
       spacing: {
         "almost-full": "90vh",
@@ -57,6 +57,6 @@ module.exports = {
     opacity: ["group-hover"],
     padding: ["first", "last", "responsive"],
     borderStyle: ["last", "responsive"],
-    color: ["hover", "responsive"]
+    color: ["hover", "responsive"],
   },
 };

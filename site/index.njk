@@ -1,97 +1,95 @@
 ---
 layout: default
 ---
-    {% set hasFeaturedBook = "fart" %}
 
-<div class="cmp-home-container h-screen flex flex-col justify-center z-10 relative max-w-md">
+{% set hasFeaturedBook = "fart" %}
+
+<div
+  class="cmp-home-container h-screen flex flex-col justify-center z-10 relative max-w-md"
+>
   <div class="mb-4">
-    <h1 class="text-4xl sm:text-6xl leading-none font-title uppercase">{{general.site_title}}</h1>
+    <h1 class="text-4xl sm:text-6xl leading-none font-title uppercase">
+      {{ general.site_title }}
+    </h1>
     {% if general.site_subtitle %}
-      <p class="text-center font-title">{{general.site_subtitle}}</p>
+    <p class="text-center font-title">{{ general.site_subtitle }}</p>
     {% endif %}
   </div>
-     {# <img 
-      class="absolute"
-      sizes="200px" 
-      srcset="{% srcset 'media/skullheadtiny.png' %}"  
-      src="{% src 'media/skullheadtiny.png' %}"/> #}
-    {# <img 
-      class="absolute"
-      sizes="200px" 
-      srcset="{% srcset 'media/tinyplum.png' %}"  
-      src="{% src 'media/tinyplum.png' %}"/> #}
-    {# <img 
-      sizes="200px"
-      srcset="{% srcset 'media/twoplum.png' %}"  
-      src="{% src 'media/twoplum.png' %}"/>
-    <img 
-      sizes="200px"
-      srcset="{% srcset 'media/gun.jpg' %}"  
-      src="{% src 'media/gun.jpg' %}"/> #}
-    {# <img 
-      sizes="200px"
-      srcset="{% srcset 'media/hoodwomantiny.png' %}"  
-      src="{% src 'media/hoodwomantiny.png' %}"/> #}
-    <img 
-      sizes="400px"
-      srcset="{% srcset 'media/skinhorse-big.png' %}"  
-      src="{% src 'media/skinhorse-big.png' %}"/>
-    {# <img 
-      sizes="200px" 
-      srcset="{% srcset 'media/tinywidget.png' %}"  
-      src="{% src 'media/tinywidget.png' %}"/> #}
-  {% include "components/nav-simple.njk" %} 
+  <img
+    sizes="400px"
+    srcset="{% srcset 'media/skinhorse-big.png' %}"
+    src="{% src 'media/skinhorse-big.png' %}"
+  />
+  {% include "components/nav-simple.njk" %}
 </div>
 
-{# <div class="w=48 relative ">
+{#
+<div class="w=48 relative">
   <div class="absolute inset-0 bg-accent1 opacity-50 z-10"></div>
-    <img 
-      class="w-full" 
-      srcset="{% srcset 'media/sky-light.jpg' %}"  
-      src="{% src 'media/sky-light.jpg' %}"/>
-</div> #}
+  <img
+    class="w-full"
+    srcset="{% srcset 'media/sky-light.jpg' %}"
+    src="{% src 'media/sky-light.jpg' %}"
+  />
+</div>
+#} {#
+<div class="cmp-cover-image fixed inset-0">
+  <img
+    class="cmp-cover-image"
+    srcset="{% srcset 'media/sky-light.jpg' %}"
+    src="{% src 'media/sky-light.jpg' %}"
+  />
+</div>
+#} {% for book in collections.book | reverse %} {% if book.data.title ==
+featured.title and featured.show == true %} {% set book = book.data %}
+<div class="max-w-screen-md mx-auto mb-24">
+  <h1 class="cmp-h1 text-center">
+    {% if featured.subtitle %}<span class="block text-xl pb-4 uppercase">{{
+      featured.subtitle
+    }}</span
+    >{% endif %}
+    {{ book.title }}
+  </h1>
+  <div class="flex flex-col md:flex-row">
+    <img
+      class="block mx-auto w-full max-w-sm md:pr-4"
+      srcset="{% srcset book.cover %}"
+      src="{% src book.cover %}"
+      alt="The book cover for {{ book.title }}"
+    />
+    <div class="flex flex-col items-center">
+      <a
+        class="cmp-link-button mt-4 mb-2 w-full max-w-sm fill-current md:mt-0"
+        href="/books/{{ book.title | slug }}"
+        >Read more
+        <span class="float-right inline-block align-middle w-6 h-6"
+          >{% include "./media/icons/chevron-right.svg" %}</span
+        ></a
+      >
+      {% for purchase_link in book.purchase_links%}
+      <a
+        class="cmp-link-button my-2 w-full max-w-sm fill-current"
+        href="{{ purchase_link.link }}"
+        >Buy at {{ purchase_link.source }}
+        <span class="float-right inline-block align-middle w-6 h-6"
+          >{% include "./media/icons/chevron-right.svg" %}</span
+        ></a
+      >
+      {% endfor %} {% for blurb in book.blurbs %}
+      <div class="my-4">
+        <p class="italic mb-2">"{{ blurb.text }}"</p>
+        <p>{{ blurb.attribution }}</p>
+      </div>
 
-{# <div class="cmp-cover-image fixed inset-0">
-  <img 
-    class="cmp-cover-image" 
-    srcset="{% srcset 'media/sky-light.jpg' %}"  
-    src="{% src 'media/sky-light.jpg' %}"/>
-</div> #}
-
-{% for book in collections.book | reverse %}
-  {% if book.data.title == featured.title and featured.show == true %}
-    {% set book = book.data %}
-    <div class="max-w-screen-md mx-auto mb-24">
-      <h1 class="cmp-h1 text-center">
-        {% if featured.subtitle %}<span class="block text-xl pb-4 uppercase">{{featured.subtitle}}</span>{% endif %}
-        {{book.title}}
-      </h1>
-        <div class="flex flex-col md:flex-row">
-          <img 
-            class="block mx-auto w-full max-w-sm md:pr-4" 
-            srcset="{% srcset book.cover %}" 
-            src="{% src book.cover %}" 
-            alt="The book cover for {{book.title}}"/>
-          <div class="flex flex-col items-center">
-            <a class="cmp-link-button mt-4 mb-2 w-full max-w-sm fill-current md:mt-0" href="/books/{{book.title | slug}}">Read more <span class="float-right inline-block align-middle w-6 h-6">{% include "./media/icons/chevron-right.svg" %}</span></a>
-            {% for purchase_link in book.purchase_links%}
-                <a class="cmp-link-button my-2 w-full max-w-sm fill-current" href="{{purchase_link.link}}">Buy at {{purchase_link.source}} <span class="float-right inline-block align-middle w-6 h-6">{% include "./media/icons/chevron-right.svg" %}</span></a>
-            {% endfor %}
-            {% for blurb in book.blurbs %}
-                <div class="my-4">
-                    <p class="italic mb-2">"{{blurb.text}}"</p>
-                    <p>{{blurb.attribution}}
-                </div>
-            {% endfor %}
-          </div>
-        </div>
+      {% endfor %}
     </div>
-  {% endif %}
-{% endfor %}
+  </div>
+</div>
+{% endif %} {% endfor %}
 
 <script>
   if (window.netlifyIdentity) {
-    window.netlifyIdentity.on("init", user => {
+    window.netlifyIdentity.on("init", (user) => {
       if (!user) {
         window.netlifyIdentity.on("login", () => {
           document.location.href = "/admin/";

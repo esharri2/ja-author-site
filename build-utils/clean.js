@@ -1,5 +1,6 @@
-const del = require("del");
+// const del = require("del");
+import { deleteAsync } from "del";
 
 (async () => {
-  const deletedPaths = await del(["dist/**/*"]);
+  const deletedPaths = await deleteAsync(["dist/**/*"]);
 })();
