@@ -21,6 +21,6 @@ description: >-
   Join me this February and write your micro-memoirs! 
 
 
-  TO SIGN UP for the course or to receive MORE INFORMATION, please me via the website contact page.
+  TO SIGN UP for the course or to receive more information, click on the CONTACT section of this website and drop me a note.
 date: 2025-02-07T00:00:52.554Z
 ---
