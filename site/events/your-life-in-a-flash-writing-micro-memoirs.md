@@ -1,6 +1,6 @@
 ---
 title: "YOUR LIFE IN A FLASH: WRITING MICRO-MEMOIRS"
-location: ZOOM | FEBRUARY 6, 13, 20, & 27 | THURSDAY NIGHTS 7-9 EST
+location: ZOOM | APRIL 3, 10, 17, & 24 | THURSDAY NIGHTS 7-9 EST
 description: >-
   We’re adept at narrativizing our lives. Even the dull and dreadful become
   fodder for a good story. But when faced with a blank page, too often our skill
@@ -15,10 +15,10 @@ description: >-
   Through a combination of collaborative craft-talks, writing exercises, and peer feedback, participants will develop the tools to infuse their writing with detail, tension, and purpose. This class welcomes beginning and experienced writers alike. 
 
 
-  Participants will generate new drafts and have the opportunity to refine their work through in class constructive feedback. The course is $200 for the month and will meet over Zoom.
+  This is a workshop. Participants will generate 3 pages a week and receive written feedback from me. This class is ideal for writers who wish to commit to and develop a consistent writing practice, but need accountability and community to support those efforts. The course is $300 for the month and will meet over Zoom.
 
 
-  Join me this February and write your micro-memoirs! 
+  Join me in APRIL and write your micro-memoirs! 
 
 
   TO SIGN UP for the course or to receive more information, click on the CONTACT section of this website and drop me a note.
