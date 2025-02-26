@@ -1,5 +1,5 @@
 ---
-title: "YOUR LIFE IN A FLASH: WRITING MICRO-MEMOIRS"
+title: "VIRTUAL WORKSHOPS: WRITING MICRO-MEMOIRS "
 location: ZOOM | APRIL 9, 16, 23, 30 | WEDNESDAY NIGHTS 7-9 EST
 description: >-
   We’re adept at narrativizing our lives. Even the dull and dreadful become
