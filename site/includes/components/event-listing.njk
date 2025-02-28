@@ -3,6 +3,6 @@
   <!-- <p>{{event.data.date | prettyDateAndTime}}</p>  -->
   <p class="mt-2">{{ event.data.location }}</p>
   {% if event.data.description %}
-  <p class="block mt-4">{{ event.data.description }}</p>
+  <p class="block mt-4 whitespace-pre-wrap">{{ event.data.description }}</p>
   {% endif %}
 </li>

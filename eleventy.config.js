@@ -87,7 +87,7 @@ module.exports = (config) => {
 
   // Transforms
   config.addTransform("add srcset", addSrcSet);
-  config.addTransform("minify html", minifyHTML);
+  // config.addTransform("minify html", minifyHTML);
 
   return {
     templateFormats: ["md", "njk", "json"],
