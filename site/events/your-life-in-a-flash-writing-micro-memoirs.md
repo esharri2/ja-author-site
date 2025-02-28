@@ -1,6 +1,6 @@
 ---
 title: "VIRTUAL WORKSHOPS: WRITING MICRO-MEMOIRS  | APRIL"
-location: ZOOM | APRIL 9, 16, 23, 30 | WEDNESDAY NIGHTS 7-9 EST
+location: ZOOM | APRIL 2, 9, 16, 23, 30 | WEDNESDAY NIGHTS 7-9 EST
 description: >-
   We’re adept at narrativizing our lives. Even the dull and dreadful become
   fodder for a good story. But when faced with a blank page, too often our skill
