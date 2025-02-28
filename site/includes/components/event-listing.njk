@@ -1,9 +1,8 @@
-  
-  <li class="py-4 first:pt-0">
-    <p class="text-xl">{{event.data.title}}</p>
-    <p>{{event.data.date | prettyDateAndTime}}</p> 
-    <p>{{event.data.location}}</p>
-    {% if event.data.description %}
-      <p class="block mt-2">{{event.data.description}}</p>
-    {% endif %}
-  </li>
+<li class="py-6 first:pt-0">
+  <p class="text-xl">{{ event.data.title }}</p>
+  <!-- <p>{{event.data.date | prettyDateAndTime}}</p>  -->
+  <p class="mt-2">{{ event.data.location }}</p>
+  {% if event.data.description %}
+  <p class="block mt-4">{{ event.data.description }}</p>
+  {% endif %}
+</li>
