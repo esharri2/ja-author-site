@@ -4,6 +4,8 @@ const markdown = require("markdown-it")({
 const path = require("path");
 const addSrcSet = require("./site/transforms/addSrcSet.js");
 const minifyHTML = require("./site/transforms/minifyHTML.js");
+const markdownIt = require("markdown-it");
+const markdownItRenderer = new markdownIt();
 
 const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
 
@@ -45,6 +47,9 @@ module.exports = (config) => {
   });
 
   // Filters
+  config.addFilter("markdownify", (str) => {
+    return markdownItRenderer.renderInline(str);
+  });
   config.addFilter("prettyDateAndTime", (value) => {
     const date = new Date(Date.parse(value));
     const options = {

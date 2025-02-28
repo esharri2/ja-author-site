@@ -8,6 +8,12 @@ html {
   @apply font-body;
 }
 
+p a {
+  color: theme("colors.accent2");
+  font-weight: bolder;
+  text-decoration: underline;
+}
+
 button,
 a,
 input,
