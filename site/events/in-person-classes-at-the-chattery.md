@@ -15,6 +15,6 @@ description: >-
   SATURDAY | APRIL 24    | 12:30 - 2PM               OPENINGS
 
 
-  To sign up for any of these classes, visit the Chattery: [https://thechattery.org](https://thechattery.org/)
+  To sign up for any of these classes, visit the Chattery: https://thechattery.org/
 date: 2025-03-01T20:00:00.000Z
 ---
