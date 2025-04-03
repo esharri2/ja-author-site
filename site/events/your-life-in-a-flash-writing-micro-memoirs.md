@@ -16,10 +16,10 @@ description: >-
   write in the mode or genre that feels appropriate to them.
 
 
-  This is a workshop. Participants generate and submit 1-3 pages each week, and receive written feedback from me. This class is ideal for writers who wish to commit to and develop a consistent writing practice, but need accountability and community to support those efforts. The course is $250 for the month and will meet over Zoom. I offer sliding scale, too, if cost is an inhibiting factor.
+  This is a workshop. Participants generate and submit 1-3 pages each week, and receive written feedback from me. This class is ideal for writers who wish to commit to and develop a consistent writing practice, but need accountability and community to support those efforts. The course is $250 for the month and will meet over Zoom. 
 
 
-  Join me in APRIL and write your micro-memoirs! 
+  Join me in MAY and write your micro-memoirs! 
 
 
   TO SIGN UP for the course or to receive more information, click on the CONTACT section of this website and drop me a note.
