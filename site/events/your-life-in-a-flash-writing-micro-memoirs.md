@@ -2,24 +2,42 @@
 title: "VIRTUAL CLASSES: FLASH WORKSHOP  | MAY"
 location: ZOOM | MAY 7, 14, 21, 28 | WEDNESDAY NIGHTS 7-9 EST
 description: >-
-  We’re adept at narrativizing our lives. Even the dull and dreadful become
-  fodder for a good story. But when faced with a blank page, too often our skill
-  and joy abandon us. In this generative workshop, we’ll transform our rich
-  experience as veteran storytellers into the key that unlocks our voices and
-  our narratives. Whether you’re writing for yourself, your loved ones, or for
-  publication, the goal of this course is to translate your stories to the page,
-  to mine your memories for sensual details, and to find new meanings in the
-  stories you keep telling. While tapping into the personal, oral tradition of
-  storytelling can be a rich source of inspiration, participants need not limit
-  themselves to writing micro-memoirs. I draw on examples from fiction, poetry,
-  and memoir to illustrate certain techniques, and I invite participants to
-  write in the mode or genre that feels appropriate to them.
+  This May, I’m offering a Flash Writing Workshop—a focused, four-week space for
+  writers ready to commit to their creative practice.
 
 
-  This is a workshop. Participants generate and submit 1-3 pages each week, and receive written feedback from me. This class is ideal for writers who wish to commit to and develop a consistent writing practice, but need accountability and community to support those efforts. The course is $250 for the month and will meet over Zoom. 
+  This workshop is designed to give you two powerful things: community and accountability. Each week, your writing will be the heart of our work. You'll submit anything from one paragraph to three pages, and we’ll spend the bulk of class offering thoughtful, supportive feedback on each submission.
 
 
-  Join me in MAY and write your micro-memoirs! 
+  We'll wrap each session with a short craft talk and an optional writing prompt to spark new ideas for the following week. Prompts are there to inspire—but you’re always welcome to follow your own creative path.
+
+
+  Who’s this for? Memoirists, poets, fiction writers—whether you're just starting out, working on a draft, or returning to a project that’s been calling your name. Past participants have included:
+
+
+  Published authors
+
+  Writers preparing work for publication
+
+  Storytellers capturing family histories
+
+  Creatives exploring or deepening a writing habit
+
+  The only requirement is that you write and submit something each week.
+
+
+  Details:
+
+
+  Cost: $250
+
+  When: Wednesdays, 7–9PM EST
+
+  Dates: May 7, 14, 21, and 28
+
+  Where: Zoom
+
+  Class size: Small, so everyone’s work gets read and discussed weekly
 
 
   TO SIGN UP for the course or to receive more information, click on the CONTACT section of this website and drop me a note.
