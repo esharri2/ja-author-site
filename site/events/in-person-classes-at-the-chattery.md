@@ -2,17 +2,13 @@
 title: IN PERSON CLASSES AT THE CHATTERY | MARCH - APRIL
 location: 231 BROAD STREET | CHATTANOOGA, TN
 description: >-
-  SATURDAY |   MARCH 1  | 3 - 4:30PM                MAKING A SCENE
+  SATURDAY | APRIL 12     | 3 - 4:30PM                FICTION IN A FLASH
 
-  SATURDAY | MARCH 22 | 12:30 - 2PM               EVOCATIVE SETTINGS 
+  SATURDAY | APRIL 26    | 3 - 4:30PM                 MICRO MEMOIRS
 
-  SATURDAY | MARCH 12  | 3 - 4:30PM                FICTION IN A FLASH
+  SATURDAY | MAY 10.      | 3 - 4:30PM                 FASCINATION & FICTION
 
-  SATURDAY | MARCH 26 | 3 - 4:30PM                MICRO MEMOIRS
-
-  SATURDAY | APRIL 10     | 3 - 4:30PM                FASCINATION AND FICTION
-
-  SATURDAY | APRIL 24    | 12:30 - 2PM               OPENINGS
+  SATURDAY | MAY 24      | 12:30 - 2PM                OPENINGS IN FICTION + NONFICTION 
 
 
   To sign up for any of these classes, visit the Chattery: https://thechattery.org/
