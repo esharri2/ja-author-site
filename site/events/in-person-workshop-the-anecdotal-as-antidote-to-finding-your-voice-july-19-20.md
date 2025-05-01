@@ -22,5 +22,5 @@ description: >-
 
 
   To enroll in this course, sign up here: [link](https://iowasummerwritingfestival.uiowa.edu/people/jessica-alexander)
-date: 2025-05-01T14:24:30.232Z
+date: 2025-07-20T14:24:30.232Z
 ---
