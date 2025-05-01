@@ -35,6 +35,6 @@ description: >-
   feedback/first impressions on writing you produce in our week.
 
 
-  To enroll in this four week workshop, visit the Iowa Summer Writing Festival: [link](https://iowasummerwritingfestival.uiowa.edu/events/1766/setting-art-writing-world) 
+  To enroll in this weeklong workshop, visit the Iowa Summer Writing Festival: [link](https://iowasummerwritingfestival.uiowa.edu/events/1766/setting-art-writing-world) 
 date: 2025-03-05T00:00:15.976Z
 ---
