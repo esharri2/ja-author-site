@@ -12,5 +12,5 @@ description: >-
 
 
   To sign up for any of these classes, visit the Chattery: [link](https://thechattery.org/classes/fascination-and-fiction-how-to-build-mystery-into-your-writing-1)
-date: 2025-03-01T20:00:00.000Z
+date: 2025-06-01T14:26:55.482Z
 ---
