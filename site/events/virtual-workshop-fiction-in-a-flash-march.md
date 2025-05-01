@@ -36,5 +36,5 @@ description: >-
 
 
   To enroll in this weeklong workshop, visit the Iowa Summer Writing Festival: [link](https://iowasummerwritingfestival.uiowa.edu/events/1766/setting-art-writing-world) 
-date: 2025-03-05T00:00:15.976Z
+date: 2025-07-18T23:00:15.976Z
 ---
