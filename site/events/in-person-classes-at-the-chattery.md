@@ -11,6 +11,6 @@ description: >-
   SATURDAY | MAY 24      | 12:30 - 2PM                OPENINGS IN FICTION + NONFICTION 
 
 
-  To sign up for any of these classes, visit the Chattery: [link](https://thechattery.org/)
+  To sign up for any of these classes, visit the Chattery: [link](https://thechattery.org/classes/fascination-and-fiction-how-to-build-mystery-into-your-writing-1)
 date: 2025-03-01T20:00:00.000Z
 ---
