@@ -6,7 +6,7 @@ description: >-
 
   SATURDAY | APRIL 26    | 3 - 4:30PM                 MICRO MEMOIRS
 
-  SATURDAY | MAY 10.      | 3 - 4:30PM                 FASCINATION & FICTION
+  SATURDAY | MAY 10       | 3 - 4:30PM                 FASCINATION & FICTION
 
   SATURDAY | MAY 24      | 12:30 - 2PM                OPENINGS IN FICTION + NONFICTION 
 
