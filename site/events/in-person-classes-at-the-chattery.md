@@ -6,11 +6,11 @@ description: >-
 
   SATURDAY | APRIL 26    | 3 - 4:30PM                 MICRO MEMOIRS
 
-  SATURDAY | MAY 10.      | 3 - 4:30PM                 FASCINATION & FICTION
+  SATURDAY | MAY 10       | 3 - 4:30PM                 FASCINATION & FICTION
 
   SATURDAY | MAY 24      | 12:30 - 2PM                OPENINGS IN FICTION + NONFICTION 
 
 
-  To sign up for any of these classes, visit the Chattery: https://thechattery.org/
+  To sign up for any of these classes, visit the Chattery: [link](https://thechattery.org/)
 date: 2025-03-01T20:00:00.000Z
 ---
