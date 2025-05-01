@@ -1,9 +1,9 @@
 ---
-title: "VIRTUAL CLASSES: FLASH WORKSHOP  | MAY"
-location: ZOOM | MAY 7, 14, 21, 28 | WEDNESDAY NIGHTS 7-9 EST
+title: "VIRTUAL CLASSES: FLASH WORKSHOP  | JUNE"
+location: ZOOM | JUNE 4, 11, 18, 25 | WEDNESDAY NIGHTS 7-9 EST
 description: >-
-  This May, I’m offering a Flash Writing Workshop—a focused, four-week space for
-  writers ready to commit to their creative practice.
+  This June, I’m offering a Flash Writing Workshop—a focused, four-week space
+  for writers ready to commit to their creative practice.
 
 
   This workshop is designed to give you two powerful things: community and accountability. Each week, your writing will be the heart of our work. You'll submit anything from one paragraph to three pages, and we’ll spend the bulk of class offering thoughtful, supportive feedback on each submission.
@@ -33,7 +33,7 @@ description: >-
 
   When: Wednesdays, 7–9PM EST
 
-  Dates: May 7, 14, 21, and 28
+  Dates: June 4, 11, 18, and 25
 
   Where: Zoom
 
@@ -41,5 +41,5 @@ description: >-
 
 
   TO SIGN UP for the course or to receive more information, click on the CONTACT section of this website and drop me a note.
-date: 2025-05-07T23:00:42.792Z
+date: 2025-06-30T23:00:42.792Z
 ---
