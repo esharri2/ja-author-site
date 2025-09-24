@@ -41,5 +41,5 @@ description: >-
 
 
   TO SIGN UP for the course or to receive more information, click on the CONTACT section of this website and drop me a note.
-date: 2025-06-30T23:00:42.792Z
+date: 2025-10-08T13:31:19.287Z
 ---
