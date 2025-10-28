@@ -1,5 +1,5 @@
 ---
-title: "VIRTUAL CLASSES: FLASH WORKSHOP  | OCTOBER"
+title: "VIRTUAL CLASSES: FLASH WORKSHOP  | NOVEMBER"
 location: ZOOM | NOVEMBER 5, 12, 19, 26 | WEDNESDAY NIGHTS 7-9 EST
 description: >-
   This NOVEMBER, I’m offering a Flash Writing Workshop—a focused, four-week
