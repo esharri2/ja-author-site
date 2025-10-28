@@ -1,9 +1,9 @@
 ---
 title: "VIRTUAL CLASSES: FLASH WORKSHOP  | OCTOBER"
-location: ZOOM | OCTOBER 8, 15, 22, 29 | WEDNESDAY NIGHTS 7-9 EST
+location: ZOOM | NOVEMBER 5, 12, 19, 26 | WEDNESDAY NIGHTS 7-9 EST
 description: >-
-  This OCTOBER, I’m offering a Flash Writing Workshop—a focused, four-week space
-  for writers ready to commit to their creative practice.
+  This NOVEMBER, I’m offering a Flash Writing Workshop—a focused, four-week
+  space for writers ready to commit to their creative practice.
 
 
   This workshop is designed to give you two powerful things: community and accountability. Each week, your writing will be the heart of our work. You'll submit anything from one paragraph to three pages, and we’ll spend the bulk of class offering thoughtful, supportive feedback on each submission.
@@ -33,7 +33,7 @@ description: >-
 
   When: Wednesdays, 7–9PM EST
 
-  Dates: October 8, 15, 22, and 29
+  Dates: November 5, 12, 19, and 26
 
   Where: Zoom
 
