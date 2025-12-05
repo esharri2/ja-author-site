@@ -42,7 +42,7 @@ pagination:
   gap-3 row-gap-6">
     {% for book in books | reverse %}
       <div class="mt-4">
-        <a class="group block relative" href="/books/{{book.data.title | slug}}">
+        <a class="group block relative" href="/books/{{book.data.title | replace("'", "") | slugify}}">
           <img 
             class="w-full" 
             srcset="{% srcset book.data.cover %}" 
